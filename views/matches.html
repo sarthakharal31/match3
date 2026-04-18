@@ -1,0 +1,197 @@
+<!-- View: Matches -->
+<!-- Best Match Today (Featured Card) -->
+<section>
+    <div class="glass-panel p-1 rounded-[2rem] overflow-hidden shadow-[0_0_50px_rgba(176,127,241,0.3)] bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/10 relative group">
+        <!-- Animated background glow -->
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/40 transition-all duration-1000"></div>
+        
+        <div class="relative p-10 flex flex-col lg:flex-row items-center gap-12">
+            <div class="relative">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl relative z-10">
+                    <img src="https://i.pravatar.cc/300?u=sarah" alt="Sarah" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-2 -right-2 bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-4 border-surface z-20">
+                    <span class="material-symbols-outlined text-xl">bolt</span>
+                </div>
+            </div>
+
+            <div class="flex-1 text-center lg:text-left">
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-4">
+                    <span class="bg-primary/20 text-primary px-4 py-1.5 rounded-full text-sm font-bold tracking-wider flex items-center gap-2">
+                        <span class="text-lg">🔥</span> BEST MATCH TODAY
+                    </span>
+                    <span class="bg-white/10 text-white/80 px-4 py-1.5 rounded-full text-sm font-bold border border-white/10">92% SYNERGY</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-headline font-black text-white mb-4 tracking-tighter">Sarah Jenkins</h2>
+                <p class="text-xl text-primary font-bold mb-4">AI Research & Web3 Strategy</p>
+                <p class="text-lg text-on-surface-variant mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Expert in LLM fine-tuning and tokenomics. She's currently looking for a technical co-founder with your exact backend expertise to launch a decentralized compute protocol.
+                </p>
+                
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <button onclick="openProfileModal('Sarah Jenkins', 'AI Research & Web3 Strategy', '92%')" class="px-10 py-4 bg-primary text-on-primary font-headline font-black rounded-full shadow-xl shadow-primary/30 hover:scale-105 transition-all btn-interact">
+                        Generate Intro
+                    </button>
+                    <button onclick="openProfileModal('Sarah Jenkins', 'AI Research & Web3 Strategy', '92%')" class="px-8 py-4 bg-surface/50 text-white border border-white/10 backdrop-blur-md rounded-full font-headline font-bold hover:bg-white/10 transition-all btn-interact">
+                        View Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Your Matches Section Header & Filters -->
+<section>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-8">
+        <div>
+            <h2 class="text-3xl font-headline font-black text-white mb-2 tracking-tight">Your Matches</h2>
+            <p class="text-on-surface-variant">AI-curated based on your interests and activity</p>
+        </div>
+        
+        <!-- Filter/Sort Bar -->
+        <div class="flex flex-wrap gap-3">
+            <div class="relative">
+                <select class="bg-surface-container-low border border-outline rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none pr-10">
+                    <option>Match Score: High to Low</option>
+                    <option>Recently Active</option>
+                    <option>Closest Goals</option>
+                </select>
+                <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none text-lg">expand_more</span>
+            </div>
+            <button class="px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-white font-bold hover:bg-white/10 transition-all">
+                Skills: AI/Web3
+            </button>
+            <button class="px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-white font-bold hover:bg-white/10 transition-all">
+                Goal: Startup
+            </button>
+            <button class="w-10 h-10 flex items-center justify-center bg-primary/20 text-primary rounded-xl border border-primary/30">
+                <span class="material-symbols-outlined text-lg">tune</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Match Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <!-- Match Card 1 -->
+        <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+            <div class="p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex gap-4">
+                        <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-white/5">
+                            <img src="https://i.pravatar.cc/150?u=elena" alt="Elena" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-headline font-bold text-white">Elena Vance</h3>
+                            <p class="text-xs text-primary font-bold uppercase tracking-widest">Protocol Architect</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-black text-white">98%</div>
+                        <div class="text-[10px] font-bold text-primary uppercase">Match</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Web3</span>
+                    <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">DAO</span>
+                    <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Solidity</span>
+                </div>
+
+                <div class="p-4 bg-white/5 rounded-2xl mb-8 border border-white/5">
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        <span class="font-bold text-primary">AI Reason:</span> Shared interest in AI agents and decentralized governance.
+                    </p>
+                </div>
+
+                <div class="mt-auto grid grid-cols-2 gap-3">
+                    <button onclick="handleAction(event, 'Connection request sent')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">Connect</button>
+                    <button onclick="openProfileModal('Elena Vance', 'Protocol Architect', '98%')" class="py-3 bg-white/5 text-white border border-white/10 rounded-xl text-xs font-bold hover:bg-white/10 transition-all btn-interact">View Profile</button>
+                    <button onclick="handleAction(event, 'Profile saved')" class="col-span-2 py-3 bg-transparent text-white/60 border border-white/5 rounded-xl text-xs font-bold hover:text-white transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">bookmark</span> Save for Later
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Match Card 2 -->
+        <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+            <div class="p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex gap-4">
+                        <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-white/5">
+                            <img src="https://i.pravatar.cc/150?u=marcus" alt="Marcus" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-headline font-bold text-white">Marcus Thorne</h3>
+                            <p class="text-xs text-primary font-bold uppercase tracking-widest">Founder @ ZK-Sync</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-black text-white">92%</div>
+                        <div class="text-[10px] font-bold text-primary uppercase">Match</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">ZK-SNARKS</span>
+                    <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Identity</span>
+                </div>
+
+                <div class="p-4 bg-white/5 rounded-2xl mb-8 border border-white/5">
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        <span class="font-bold text-primary">AI Reason:</span> Same goal: Building privacy-first social platforms.
+                    </p>
+                </div>
+
+                <div class="mt-auto grid grid-cols-2 gap-3">
+                    <button onclick="handleAction('Connection request sent')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">Connect</button>
+                    <button onclick="openProfileModal('Marcus Thorne', 'Founder @ ZK-Sync', '92%')" class="py-3 bg-white/5 text-white border border-white/10 rounded-xl text-xs font-bold hover:bg-white/10 transition-all btn-interact">View Profile</button>
+                    <button onclick="handleAction('Profile saved')" class="col-span-2 py-3 bg-transparent text-white/60 border border-white/5 rounded-xl text-xs font-bold hover:text-white transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">bookmark</span> Save for Later
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Match Card 3 -->
+        <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+            <div class="p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex gap-4">
+                        <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-white/5">
+                            <img src="https://i.pravatar.cc/150?u=jordan" alt="Jordan" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-headline font-bold text-white">Jordan Chen</h3>
+                            <p class="text-xs text-primary font-bold uppercase tracking-widest">Rust Developer</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-black text-white">88%</div>
+                        <div class="text-[10px] font-bold text-primary uppercase">Match</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Rust</span>
+                    <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Wasm</span>
+                </div>
+
+                <div class="p-4 bg-white/5 rounded-2xl mb-8 border border-white/5">
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        <span class="font-bold text-primary">AI Reason:</span> Complementary skills: Backend and low-level optimization.
+                    </p>
+                </div>
+
+                <div class="mt-auto grid grid-cols-2 gap-3">
+                    <button onclick="handleAction('Connection request sent')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">Connect</button>
+                    <button onclick="openProfileModal('Jordan Chen', 'Rust Developer', '88%')" class="py-3 bg-white/5 text-white border border-white/10 rounded-xl text-xs font-bold hover:bg-white/10 transition-all btn-interact">View Profile</button>
+                    <button onclick="handleAction('Profile saved')" class="col-span-2 py-3 bg-transparent text-white/60 border border-white/5 rounded-xl text-xs font-bold hover:text-white transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">bookmark</span> Save for Later
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

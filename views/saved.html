@@ -1,0 +1,90 @@
+<!-- View: Saved People -->
+<section>
+    <h2 class="text-3xl font-headline font-black text-white mb-2 tracking-tight">Saved People</h2>
+    <p class="text-on-surface-variant">Review and manage the connections you've bookmarked.</p>
+</section>
+
+<!-- Saved Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+    <!-- Saved Card 1 -->
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 flex flex-col p-8">
+        <div class="flex items-start justify-between mb-6">
+            <div class="flex gap-4">
+                <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-white/5">
+                    <img src="https://i.pravatar.cc/150?u=elena" alt="Elena" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xl font-headline font-bold text-white">Elena Vance</h3>
+                    <p class="text-xs text-primary font-bold uppercase tracking-widest">Protocol Architect</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <div class="text-2xl font-black text-white">98%</div>
+                <div class="text-[10px] font-bold text-primary uppercase">Match</div>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Web3</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">DAO</span>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-2xl mb-8 border border-white/5 italic">
+            <p class="text-sm text-white/40">
+                "Met at Web3 Summit 2026. Interested in agent-to-agent communication."
+            </p>
+        </div>
+
+        <div class="mt-auto grid grid-cols-2 gap-3">
+            <button onclick="openProfileModal('Elena Vance', 'Protocol Architect', '98%')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">View Profile</button>
+            <button onclick="handleAction(event, 'Profile removed')" class="py-3 bg-white/5 text-white border border-white/10 rounded-xl text-xs font-bold hover:bg-red-500/20 hover:text-red-500 transition-all">Remove</button>
+        </div>
+    </div>
+
+    <!-- Saved Card 2 -->
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 flex flex-col p-8">
+        <div class="flex items-start justify-between mb-6">
+            <div class="flex gap-4">
+                <div class="w-16 h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-white/5">
+                    <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xl font-headline font-bold text-white">Sarah Jenkins</h3>
+                    <p class="text-xs text-primary font-bold uppercase tracking-widest">AI Research</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <div class="text-2xl font-black text-white">92%</div>
+                <div class="text-[10px] font-bold text-primary uppercase">Match</div>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">LLM</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Compute</span>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-2xl mb-8 border border-white/5 italic">
+            <p class="text-sm text-white/40">
+                "Potential co-founder for the decentralised compute project."
+            </p>
+        </div>
+
+        <div class="mt-auto grid grid-cols-2 gap-3">
+            <button onclick="openProfileModal('Sarah Jenkins', 'AI Research', '92%')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">View Profile</button>
+            <button onclick="handleAction(event, 'Profile removed')" class="py-3 bg-white/5 text-white border border-white/10 rounded-xl text-xs font-bold hover:bg-red-500/20 hover:text-red-500 transition-all">Remove</button>
+        </div>
+    </div>
+
+    <!-- Empty State (Hidden) -->
+    <div class="col-span-full py-20 hidden flex-col items-center text-center">
+        <div class="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center text-white/20 mb-6">
+            <span class="material-symbols-outlined text-4xl">bookmark_border</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">No saved matches yet</h3>
+        <p class="text-on-surface-variant max-w-xs">Start exploring matches and bookmark the ones that catch your eye.</p>
+        <button onclick="showView('matches')" class="mt-8 px-6 py-3 bg-primary/20 text-primary border border-primary/30 rounded-xl font-bold text-sm btn-interact">
+            Find Matches
+        </button>
+    </div>
+</div>

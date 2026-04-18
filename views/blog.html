@@ -1,0 +1,139 @@
+<!-- View: Blog -->
+<section class="space-y-4">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+            <span class="text-xs font-black uppercase tracking-widest text-primary mb-2 block">Knowledge Hub</span>
+            <h2 class="text-3xl md:text-4xl font-headline font-black text-white tracking-tight">Builder's Blog</h2>
+            <p class="text-on-surface-variant mt-1">Guides, tips, and insights for the AI + Web3 generation.</p>
+        </div>
+        <div class="flex gap-3 flex-wrap">
+            <button class="px-4 py-2 bg-primary/20 text-primary border border-primary/30 rounded-xl text-xs font-black uppercase tracking-wider btn-interact">All</button>
+            <button class="px-4 py-2 bg-white/5 text-white/60 border border-white/10 rounded-xl text-xs font-black uppercase tracking-wider btn-interact hover:text-white transition-all">Networking</button>
+            <button class="px-4 py-2 bg-white/5 text-white/60 border border-white/10 rounded-xl text-xs font-black uppercase tracking-wider btn-interact hover:text-white transition-all">Web3</button>
+            <button class="px-4 py-2 bg-white/5 text-white/60 border border-white/10 rounded-xl text-xs font-black uppercase tracking-wider btn-interact hover:text-white transition-all">AI</button>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Article -->
+<div class="glass-panel rounded-[2.5rem] overflow-hidden border border-primary/20 bg-primary/5 relative group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
+    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="p-10 md:p-14 flex flex-col md:flex-row gap-10 items-center relative">
+        <div class="flex-1">
+            <div class="flex gap-3 mb-6">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-lg text-[10px] font-black uppercase border border-primary/30">Featured</span>
+                <span class="px-3 py-1 bg-white/10 text-white/60 rounded-lg text-[10px] font-black uppercase">Networking</span>
+            </div>
+            <h3 class="text-3xl font-headline font-black text-white mb-4 leading-tight">The Art of the Cold Intro at Web3 Events</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8 text-lg">Walking into a conference not knowing anyone is terrifying. This guide gives you 5 AI-powered tactics to break the ice, start memorable conversations, and leave with connections that actually matter.</p>
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="https://i.pravatar.cc/40?u=author1" class="w-10 h-10 rounded-xl">
+                    <div>
+                        <p class="text-sm font-bold text-white">David Miller</p>
+                        <p class="text-xs text-white/40">April 12, 2026 · 8 min read</p>
+                    </div>
+                </div>
+                <button onclick="handleAction(event,'Article opened')" class="ml-auto px-6 py-3 bg-primary text-on-primary font-bold rounded-xl text-sm btn-interact">Read Article</button>
+            </div>
+        </div>
+        <div class="w-full md:w-64 h-48 rounded-2xl bg-gradient-to-br from-primary/30 to-secondary/20 flex items-center justify-center text-8xl shrink-0">
+            🤝
+        </div>
+    </div>
+</div>
+
+<!-- Article Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-secondary/30 to-primary/20 flex items-center justify-center text-6xl">🧠</div>
+        <div class="p-8 flex flex-col flex-1">
+            <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-secondary/10 text-secondary rounded-md text-[10px] font-black uppercase border border-secondary/20">AI</span>
+            </div>
+            <h4 class="text-lg font-headline font-bold text-white mb-3 leading-tight">How LLMs Are Changing the Way We Network</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">From AI-drafted intros to semantic skill matching, large language models are quietly reshaping professional networking from the ground up.</p>
+            <div class="flex items-center justify-between mt-auto">
+                <p class="text-xs text-white/40">April 8, 2026 · 6 min</p>
+                <button onclick="handleAction(event,'Article opened')" class="px-4 py-2 bg-white/5 border border-white/10 text-white font-bold text-xs rounded-xl btn-interact hover:bg-white/10 transition-all">Read →</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-primary/20 to-secondary/30 flex items-center justify-center text-6xl">⛓️</div>
+        <div class="p-8 flex flex-col flex-1">
+            <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary/10 text-primary rounded-md text-[10px] font-black uppercase border border-primary/20">Web3</span>
+            </div>
+            <h4 class="text-lg font-headline font-bold text-white mb-3 leading-tight">Your On-Chain Identity Is Your Best Business Card</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">ENS names, DAO contributions, and NFT collections say more about you to a Web3 audience than any paper resume ever could.</p>
+            <div class="flex items-center justify-between mt-auto">
+                <p class="text-xs text-white/40">April 5, 2026 · 5 min</p>
+                <button onclick="handleAction(event,'Article opened')" class="px-4 py-2 bg-white/5 border border-white/10 text-white font-bold text-xs rounded-xl btn-interact hover:bg-white/10 transition-all">Read →</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-secondary/20 to-primary/30 flex items-center justify-center text-6xl">🚀</div>
+        <div class="p-8 flex flex-col flex-1">
+            <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-secondary/10 text-secondary rounded-md text-[10px] font-black uppercase border border-secondary/20">Networking</span>
+            </div>
+            <h4 class="text-lg font-headline font-bold text-white mb-3 leading-tight">Finding Your Co-Founder at a Hackathon: A Playbook</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">48 hours, hundreds of strangers, and one goal. Here's the tactical approach that turns a hackathon weekend into a founding team.</p>
+            <div class="flex items-center justify-between mt-auto">
+                <p class="text-xs text-white/40">April 1, 2026 · 7 min</p>
+                <button onclick="handleAction(event,'Article opened')" class="px-4 py-2 bg-white/5 border border-white/10 text-white font-bold text-xs rounded-xl btn-interact hover:bg-white/10 transition-all">Read →</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-primary/30 to-secondary/10 flex items-center justify-center text-6xl">🔮</div>
+        <div class="p-8 flex flex-col flex-1">
+            <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary/10 text-primary rounded-md text-[10px] font-black uppercase border border-primary/20">AI</span>
+            </div>
+            <h4 class="text-lg font-headline font-bold text-white mb-3 leading-tight">The Future of DAO Governance: Who Decides?</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">As DAOs scale to thousands of members, the simple voting model breaks down. We explore new governance primitives being tested today.</p>
+            <div class="flex items-center justify-between mt-auto">
+                <p class="text-xs text-white/40">March 28, 2026 · 9 min</p>
+                <button onclick="handleAction(event,'Article opened')" class="px-4 py-2 bg-white/5 border border-white/10 text-white font-bold text-xs rounded-xl btn-interact hover:bg-white/10 transition-all">Read →</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-secondary/30 to-primary/10 flex items-center justify-center text-6xl">📊</div>
+        <div class="p-8 flex flex-col flex-1">
+            <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-secondary/10 text-secondary rounded-md text-[10px] font-black uppercase border border-secondary/20">Web3</span>
+            </div>
+            <h4 class="text-lg font-headline font-bold text-white mb-3 leading-tight">DeFi in 2026: Where Yield Meets Real Utility</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">The speculative mania is over. The survivors are building products people actually use. Here's where the smart money is watching.</p>
+            <div class="flex items-center justify-between mt-auto">
+                <p class="text-xs text-white/40">March 22, 2026 · 5 min</p>
+                <button onclick="handleAction(event,'Article opened')" class="px-4 py-2 bg-white/5 border border-white/10 text-white font-bold text-xs rounded-xl btn-interact hover:bg-white/10 transition-all">Read →</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-panel rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5 flex flex-col">
+        <div class="h-40 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-6xl">💡</div>
+        <div class="p-8 flex flex-col flex-1">
+            <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary/10 text-primary rounded-md text-[10px] font-black uppercase border border-primary/20">Networking</span>
+            </div>
+            <h4 class="text-lg font-headline font-bold text-white mb-3 leading-tight">10 Questions to Ask Before Accepting a Connection</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Not every connection adds value. These ten questions help you qualify potential collaborators before investing time in a relationship.</p>
+            <div class="flex items-center justify-between mt-auto">
+                <p class="text-xs text-white/40">March 15, 2026 · 4 min</p>
+                <button onclick="handleAction(event,'Article opened')" class="px-4 py-2 bg-white/5 border border-white/10 text-white font-bold text-xs rounded-xl btn-interact hover:bg-white/10 transition-all">Read →</button>
+            </div>
+        </div>
+    </div>
+
+</div>

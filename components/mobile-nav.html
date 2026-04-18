@@ -1,0 +1,24 @@
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#0b081c]/90 backdrop-blur-lg h-20 flex items-center justify-around px-4 z-50 border-t border-white/5">
+    <button id="mobile-nav-home" class="flex flex-col items-center gap-1 text-[#ffffff]" onclick="showView('home')">
+        <span class="material-symbols-outlined" data-icon="dashboard"
+            style="font-variation-settings: 'FILL' 1;">dashboard</span>
+        <span class="text-[10px] font-bold">Dash</span>
+    </button>
+    <button id="mobile-nav-matches" class="flex flex-col items-center gap-1 text-[#ffffff]/40" onclick="showView('matches')">
+        <span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+        <span class="text-[10px] font-bold">Match</span>
+    </button>
+    <div
+        class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -translate-y-4 shadow-lg text-on-primary">
+        <span class="material-symbols-outlined" data-icon="add">add</span>
+    </div>
+    <button id="mobile-nav-saved" class="flex flex-col items-center gap-1 text-[#ffffff]/40" onclick="showView('saved')">
+        <span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+        <span class="text-[10px] font-bold">Saved</span>
+    </button>
+    <button id="mobile-nav-settings" class="flex flex-col items-center gap-1 text-[#ffffff]/40" onclick="showView('settings')">
+        <span class="material-symbols-outlined" data-icon="settings">settings</span>
+        <span class="text-[10px] font-bold">Set</span>
+    </button>
+</nav>

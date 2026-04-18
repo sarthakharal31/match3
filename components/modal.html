@@ -1,0 +1,172 @@
+<!-- Profile Modal Shell -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-10 bg-black/90 backdrop-blur-2xl" id="profile-modal-overlay">
+    <div class="w-full max-w-5xl bg-[#0a0a0c] rounded-[2.5rem] overflow-hidden shadow-[0_0_100px_rgba(176,127,241,0.15)] border border-white/10 modal-animate flex flex-col max-h-[95vh] relative">
+        
+        <!-- Close Button -->
+        <button onclick="closeProfileModal()" class="absolute top-6 right-6 z-50 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/60 hover:text-white transition-all">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+
+        <!-- Scrolling Content Area -->
+        <div class="flex-1 overflow-y-auto custom-scrollbar pb-20">
+            <!-- Header / Banner Section -->
+            <div class="relative h-48 md:h-64 bg-gradient-to-r from-primary/40 via-secondary/30 to-primary/20">
+                <!-- Abstract Web3 Pattern Overlay -->
+                <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+                
+                <!-- Profile Image Overflow -->
+                <div class="absolute -bottom-16 left-8 md:left-12">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-[2.5rem] bg-[#0a0a0c] p-1 shadow-2xl">
+                        <img id="modal-profile-img" src="https://i.pravatar.cc/300" alt="Profile" class="w-full h-full object-cover rounded-[2.2rem]">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Info Section -->
+            <div class="pt-20 px-8 md:px-12 pb-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <div class="flex items-center gap-3 mb-1">
+                            <h3 id="modal-profile-name" class="text-3xl md:text-4xl font-headline font-black text-white">Elena Vance</h3>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest border border-primary/30">Verified Builder</span>
+                        </div>
+                        <p id="modal-profile-role" class="text-lg md:text-xl text-primary font-bold mb-2">Protocol Architect @ Decentralized Systems</p>
+                        <div class="flex flex-wrap items-center gap-4 text-white/40 text-sm">
+                            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">location_on</span> San Francisco, CA</span>
+                            <span class="flex items-center gap-1.5 font-bold text-secondary"><span class="material-symbols-outlined text-sm">group</span> 500+ connections</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button onclick="handleAction(event, 'Connection request sent')" class="px-8 py-3 bg-primary text-on-primary font-headline font-black rounded-xl shadow-lg shadow-primary/20 hover:scale-105 transition-all btn-interact">
+                            Connect
+                        </button>
+                        <button onclick="handleAction(event, 'Profile saved')" class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-white/60 hover:text-white transition-all">
+                            <span class="material-symbols-outlined">bookmark</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12">
+                    <!-- Left Column: Details -->
+                    <div class="lg:col-span-8 space-y-12">
+                        <!-- AI Synergy Section (Highlight) -->
+                        <div class="glass-panel p-8 rounded-[2rem] border-2 border-primary/20 bg-primary/5 relative overflow-hidden group">
+                            <div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/20 blur-3xl rounded-full"></div>
+                            <h4 class="text-lg font-headline font-black text-white mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                                AI Synergy Insight
+                            </h4>
+                            <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 mb-6">
+                                <p id="modal-intro-text" class="text-lg text-white/80 leading-relaxed italic">
+                                    "Elena is looking for a technical co-founder with your exact Rust background. Her current protocol architecture matches your recent work on ZK-SNARKS perfectly."
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <button onclick="copyToClipboard()" class="px-6 py-2.5 bg-white text-black text-xs font-black rounded-lg hover:bg-white/80 transition-all flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">content_copy</span> Copy Intro
+                                </button>
+                                <button onclick="regenerateIntro()" class="px-6 py-2.5 bg-white/5 text-white/60 text-xs font-black rounded-lg border border-white/10 hover:text-white transition-all">
+                                    Regenerate
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- About Section -->
+                        <div class="space-y-4">
+                            <h4 class="text-xl font-headline font-bold text-white flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">info</span>
+                                About
+                            </h4>
+                            <p class="text-on-surface-variant leading-relaxed text-lg">
+                                Passionate protocol engineer with 6+ years of experience in distributed systems. Currently obsessed with building the next generation of cross-chain communication layers. I love mentoring and finding synergy between AI and Web3.
+                            </p>
+                        </div>
+
+                        <!-- Experience Section -->
+                        <div class="space-y-8">
+                            <h4 class="text-xl font-headline font-bold text-white flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">work</span>
+                                Experience
+                            </h4>
+                            <div class="space-y-8 pl-4 border-l-2 border-white/5">
+                                <!-- Job 1 -->
+                                <div class="relative">
+                                    <div class="absolute -left-[21px] top-0 w-4 h-4 rounded-full bg-secondary border-4 border-[#0a0a0c]"></div>
+                                    <div class="flex gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
+                                            <span class="material-symbols-outlined text-white/40">business</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-bold text-lg">Lead Protocol Architect</p>
+                                            <p class="text-primary font-bold text-sm">Decentralized Systems • Full-time</p>
+                                            <p class="text-white/40 text-xs mt-1">Jan 2022 - Present • 2 yrs 4 mos</p>
+                                            <p class="text-white/60 text-sm mt-3">Leading the development of a high-performance L2 solution. Scaled the network to 1M+ transactions per day.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Job 2 -->
+                                <div class="relative">
+                                    <div class="absolute -left-[21px] top-0 w-4 h-4 rounded-full bg-white/10 border-4 border-[#0a0a0c]"></div>
+                                    <div class="flex gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
+                                            <span class="material-symbols-outlined text-white/40">business</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-bold text-lg">Senior Backend Engineer</p>
+                                            <p class="text-primary font-bold text-sm">Web3 Solutions • Contract</p>
+                                            <p class="text-white/40 text-xs mt-1">May 2019 - Dec 2021 • 2 yrs 8 mos</p>
+                                            <p class="text-white/60 text-sm mt-3">Developed core smart contracts and backend infrastructure using Rust and Solidity.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Skills & Stats -->
+                    <div class="lg:col-span-4 space-y-12">
+                        <!-- Skills -->
+                        <div class="space-y-6">
+                            <h4 class="text-sm font-black text-white/40 uppercase tracking-widest px-1">Top Skills</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-primary/20 hover:border-primary/30 transition-all cursor-default">Protocol Design</span>
+                                <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-primary/20 hover:border-primary/30 transition-all cursor-default">Rust / Wasm</span>
+                                <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-primary/20 hover:border-primary/30 transition-all cursor-default">ZK-Proofs</span>
+                                <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-primary/20 hover:border-primary/30 transition-all cursor-default">Solidity</span>
+                                <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-primary/20 hover:border-primary/30 transition-all cursor-default">AI Agents</span>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="space-y-6">
+                            <h4 class="text-sm font-black text-white/40 uppercase tracking-widest px-1">Education</h4>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-white/40">school</span>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold text-sm">Stanford University</p>
+                                    <p class="text-white/40 text-[10px] uppercase font-bold tracking-tighter">B.S. Computer Science</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mutual Connections -->
+                        <div class="space-y-6">
+                            <h4 class="text-sm font-black text-white/40 uppercase tracking-widest px-1">Mutual Connections</h4>
+                            <div class="flex items-center -space-x-3">
+                                <img src="https://i.pravatar.cc/50?u=1" class="w-10 h-10 rounded-full border-2 border-[#0a0a0c]">
+                                <img src="https://i.pravatar.cc/50?u=2" class="w-10 h-10 rounded-full border-2 border-[#0a0a0c]">
+                                <img src="https://i.pravatar.cc/50?u=3" class="w-10 h-10 rounded-full border-2 border-[#0a0a0c]">
+                                <div class="w-10 h-10 rounded-full bg-white/5 border-2 border-[#0a0a0c] flex items-center justify-center text-xs text-white/40 font-bold">+12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Footer for Actions on Mobile -->
+        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent h-20 pointer-events-none md:hidden"></div>
+    </div>
+</div>

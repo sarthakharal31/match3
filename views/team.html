@@ -1,0 +1,174 @@
+<!-- View: Your Team -->
+<section class="space-y-4">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+            <h2 class="text-3xl md:text-4xl font-headline font-black text-white tracking-tight">Your Team</h2>
+            <p class="text-on-surface-variant mt-1">People in your network who have accepted your connection.</p>
+        </div>
+        <button onclick="showView('matches')" class="shrink-0 px-6 py-3 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-105 transition-all btn-interact text-sm flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg">add</span> Find More
+        </button>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-panel p-6 rounded-2xl border border-white/5">
+            <p class="text-xs font-bold text-white/40 uppercase tracking-widest mb-2">Connections</p>
+            <p class="text-3xl font-headline font-black text-white">18</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl border border-white/5">
+            <p class="text-xs font-bold text-white/40 uppercase tracking-widest mb-2">Pending</p>
+            <p class="text-3xl font-headline font-black text-secondary">4</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl border border-white/5">
+            <p class="text-xs font-bold text-white/40 uppercase tracking-widest mb-2">Mutual Goals</p>
+            <p class="text-3xl font-headline font-black text-primary">11</p>
+        </div>
+        <div class="glass-panel p-6 rounded-2xl border border-white/5">
+            <p class="text-xs font-bold text-white/40 uppercase tracking-widest mb-2">Avg. Match</p>
+            <p class="text-3xl font-headline font-black text-white">91%</p>
+        </div>
+    </div>
+</section>
+
+<!-- Team Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+    <!-- Team Member 1 -->
+    <div class="glass-panel rounded-[2rem] p-8 flex flex-col gap-6 group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5">
+        <div class="flex items-center gap-4">
+            <div class="relative">
+                <img src="https://i.pravatar.cc/150?u=sarah" class="w-16 h-16 rounded-2xl object-cover" alt="Sarah">
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-[#0a0a0c]"></span>
+            </div>
+            <div class="flex-1 min-w-0">
+                <p class="font-headline font-bold text-white text-lg truncate">Sarah Jenkins</p>
+                <p class="text-xs text-primary font-bold uppercase tracking-widest truncate">AI Research</p>
+            </div>
+            <div class="text-right shrink-0">
+                <p class="text-xl font-black text-white">92%</p>
+                <p class="text-[10px] text-primary font-bold uppercase">Match</p>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">LLM</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Compute</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Co-founder</span>
+        </div>
+        <p class="text-sm text-white/40 italic">"Looking to build a decentralised compute protocol."</p>
+        <div class="grid grid-cols-2 gap-3 mt-auto">
+            <button onclick="openProfileModal('Sarah Jenkins','AI Research','92%')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">View Profile</button>
+            <button onclick="handleAction(event,'Message sent')" class="py-3 bg-white/5 border border-white/10 text-white font-bold rounded-xl text-xs btn-interact hover:bg-white/10 transition-all">Message</button>
+        </div>
+    </div>
+
+    <!-- Team Member 2 -->
+    <div class="glass-panel rounded-[2rem] p-8 flex flex-col gap-6 group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5">
+        <div class="flex items-center gap-4">
+            <div class="relative">
+                <img src="https://i.pravatar.cc/150?u=elena" class="w-16 h-16 rounded-2xl object-cover" alt="Elena">
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-[#0a0a0c]"></span>
+            </div>
+            <div class="flex-1 min-w-0">
+                <p class="font-headline font-bold text-white text-lg truncate">Elena Vance</p>
+                <p class="text-xs text-primary font-bold uppercase tracking-widest truncate">Protocol Architect</p>
+            </div>
+            <div class="text-right shrink-0">
+                <p class="text-xl font-black text-white">98%</p>
+                <p class="text-[10px] text-primary font-bold uppercase">Match</p>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Web3</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">DAO</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Solidity</span>
+        </div>
+        <p class="text-sm text-white/40 italic">"Decentralised governance and L2 protocol expert."</p>
+        <div class="grid grid-cols-2 gap-3 mt-auto">
+            <button onclick="openProfileModal('Elena Vance','Protocol Architect','98%')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">View Profile</button>
+            <button onclick="handleAction(event,'Message sent')" class="py-3 bg-white/5 border border-white/10 text-white font-bold rounded-xl text-xs btn-interact hover:bg-white/10 transition-all">Message</button>
+        </div>
+    </div>
+
+    <!-- Team Member 3 -->
+    <div class="glass-panel rounded-[2rem] p-8 flex flex-col gap-6 group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5">
+        <div class="flex items-center gap-4">
+            <div class="relative">
+                <img src="https://i.pravatar.cc/150?u=marcus" class="w-16 h-16 rounded-2xl object-cover" alt="Marcus">
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-[#0a0a0c]"></span>
+            </div>
+            <div class="flex-1 min-w-0">
+                <p class="font-headline font-bold text-white text-lg truncate">Marcus Thorne</p>
+                <p class="text-xs text-primary font-bold uppercase tracking-widest truncate">Founder @ ZK-Sync</p>
+            </div>
+            <div class="text-right shrink-0">
+                <p class="text-xl font-black text-white">92%</p>
+                <p class="text-[10px] text-primary font-bold uppercase">Match</p>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">ZK-SNARKS</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Identity</span>
+        </div>
+        <p class="text-sm text-white/40 italic">"Away – Building privacy-first social platforms."</p>
+        <div class="grid grid-cols-2 gap-3 mt-auto">
+            <button onclick="openProfileModal('Marcus Thorne','Founder @ ZK-Sync','92%')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">View Profile</button>
+            <button onclick="handleAction(event,'Message sent')" class="py-3 bg-white/5 border border-white/10 text-white font-bold rounded-xl text-xs btn-interact hover:bg-white/10 transition-all">Message</button>
+        </div>
+    </div>
+
+    <!-- Team Member 4 -->
+    <div class="glass-panel rounded-[2rem] p-8 flex flex-col gap-6 group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-white/5">
+        <div class="flex items-center gap-4">
+            <div class="relative">
+                <img src="https://i.pravatar.cc/150?u=jordan" class="w-16 h-16 rounded-2xl object-cover" alt="Jordan">
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-[#0a0a0c]"></span>
+            </div>
+            <div class="flex-1 min-w-0">
+                <p class="font-headline font-bold text-white text-lg truncate">Jordan Chen</p>
+                <p class="text-xs text-primary font-bold uppercase tracking-widest truncate">Rust Developer</p>
+            </div>
+            <div class="text-right shrink-0">
+                <p class="text-xl font-black text-white">88%</p>
+                <p class="text-[10px] text-primary font-bold uppercase">Match</p>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Rust</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Wasm</span>
+        </div>
+        <p class="text-sm text-white/40 italic">"Backend engineering meets blockchain infrastructure."</p>
+        <div class="grid grid-cols-2 gap-3 mt-auto">
+            <button onclick="openProfileModal('Jordan Chen','Rust Developer','88%')" class="py-3 bg-primary text-on-primary font-bold rounded-xl text-xs btn-interact">View Profile</button>
+            <button onclick="handleAction(event,'Message sent')" class="py-3 bg-white/5 border border-white/10 text-white font-bold rounded-xl text-xs btn-interact hover:bg-white/10 transition-all">Message</button>
+        </div>
+    </div>
+
+    <!-- Pending Invite Card -->
+    <div class="glass-panel rounded-[2rem] p-8 flex flex-col gap-6 border border-secondary/20 bg-secondary/5">
+        <div class="flex items-center gap-4">
+            <div class="relative">
+                <img src="https://i.pravatar.cc/150?u=priya" class="w-16 h-16 rounded-2xl object-cover" alt="Priya">
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full border-2 border-[#0a0a0c] animate-pulse"></span>
+            </div>
+            <div class="flex-1 min-w-0">
+                <p class="font-headline font-bold text-white text-lg truncate">Priya Kapoor</p>
+                <p class="text-xs text-secondary font-bold uppercase tracking-widest truncate">DeFi Strategist</p>
+            </div>
+            <div class="text-right shrink-0">
+                <p class="text-xl font-black text-white">85%</p>
+                <p class="text-[10px] text-secondary font-bold uppercase">Match</p>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">DeFi</span>
+            <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase border border-secondary/20">Tokenomics</span>
+        </div>
+        <div class="px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-xl text-xs text-secondary font-bold text-center">⏳ Invite Pending</div>
+        <div class="grid grid-cols-2 gap-3 mt-auto">
+            <button onclick="handleAction(event,'Request accepted')" class="py-3 bg-secondary text-black font-bold rounded-xl text-xs btn-interact">Accept</button>
+            <button onclick="handleAction(event,'Request ignored')" class="py-3 bg-white/5 border border-white/10 text-white font-bold rounded-xl text-xs btn-interact hover:bg-red-500/10 hover:text-red-400 transition-all">Ignore</button>
+        </div>
+    </div>
+
+</div>

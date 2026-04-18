@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CURATOR | AI + Web3 Matchmaker</title>
+
+    <!-- Scripts & Fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#b07ff1",
+                        "on-primary": "#ffffff",
+                        "secondary": "#ffcfb3",
+                        "on-secondary": "#000000",
+                        "background": "transparent",
+                        "on-background": "#ffffff",
+                        "surface": "rgba(11, 8, 28, 0.5)",
+                        "on-surface": "#ffffff",
+                        "surface-variant": "rgba(255, 255, 255, 0.05)",
+                        "on-surface-variant": "#b4b0c7",
+                        "surface-container-low": "rgba(255, 255, 255, 0.03)",
+                        "surface-container-high": "rgba(11, 8, 28, 0.8)",
+                        "secondary-container": "rgba(176, 127, 241, 0.2)",
+                        "on-secondary-container": "#e0d1ff",
+                        "outline": "rgba(255, 255, 255, 0.1)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="theme-bg text-on-background font-body selection:bg-primary selection:text-on-primary overflow-x-hidden min-h-screen">
+
+    <!-- Header Component Placeholder -->
+    <div id="header-container"></div>
+
+    <div class="flex">
+        <!-- Sidebar Component Placeholder -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content Canvas -->
+        <main class="flex-1 lg:ml-64 p-8 lg:p-12 min-h-screen focus-transition w-full relative z-10">
+            <!-- Home View Placeholder -->
+            <div id="view-home" class="view-content space-y-12 hidden"></div>
+
+            <!-- Matches View Placeholder -->
+            <div id="view-matches" class="view-content space-y-12 hidden"></div>
+
+            <!-- Saved View Placeholder -->
+            <div id="view-saved" class="view-content space-y-12 hidden"></div>
+
+            <!-- Settings View Placeholder -->
+            <div id="view-settings" class="view-content space-y-12 hidden"></div>
+
+            <!-- Team View Placeholder -->
+            <div id="view-team" class="view-content space-y-12 hidden"></div>
+
+            <!-- Solutions View Placeholder -->
+            <div id="view-solutions" class="view-content space-y-12 hidden"></div>
+
+            <!-- Blog View Placeholder -->
+            <div id="view-blog" class="view-content space-y-12 hidden"></div>
+
+            <!-- Pricing View Placeholder -->
+            <div id="view-pricing" class="view-content space-y-12 hidden"></div>
+        </main>
+    </div>
+
+    <!-- Modal Component Placeholder -->
+    <div id="modal-container"></div>
+
+    <!-- Mobile Bottom Navigation Placeholder -->
+    <div id="mobile-nav-container"></div>
+
+    <!-- Local Logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<section class="space-y-6">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-headline font-black text-white tracking-tighter mb-4">Find Your Perfect Match</h1>
+            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">AI matched you with <span class="text-primary font-bold">12 new people</span> based on your startup goals.</p>
+        </div>
+        <button onclick="showView('matches')" class="px-8 py-4 bg-primary text-on-primary font-headline font-black rounded-2xl shadow-xl shadow-primary/30 hover:scale-105 transition-all btn-interact shrink-0">
+            Find Matches
+        </button>
+    </div>
+
+    <!-- LinkedIn-style Search Bar -->
+    <div class="relative w-full max-w-3xl group">
+        <span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-white/40 group-focus-within:text-primary transition-colors text-2xl">search</span>
+        <input type="text" placeholder="Search people, skills, or interests..." onkeyup="handleSearch(event)"
+            class="w-full bg-white/5 border border-white/10 rounded-[2rem] py-5 pl-16 pr-8 text-lg text-white focus:outline-none focus:ring-4 focus:ring-primary/20 focus:bg-white/10 transition-all shadow-2xl">
+    </div>
+</section>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between min-h-[200px] border border-primary/20 bg-primary/5">
+            <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Synergy Score</span>
+            <div class="text-7xl font-headline font-black text-white mb-4" id="synergy-score">94%</div>
+            <p class="text-xs text-on-surface-variant">Top 5% of active matchmakers this month.</p>
+        </div>
+        <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between min-h-[200px]">
+            <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-4 block">Connections Pulse</span>
+            <div class="text-4xl font-headline font-black text-white mb-4">Steady Growth</div>
+            <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full bg-secondary w-2/3"></div>
+            </div>
+        </div>
+        <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between min-h-[200px]">
+            <span class="text-xs font-bold uppercase tracking-widest text-white/40 mb-4 block">Recent Activity</span>
+            <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-primary"></div>
+                    <p class="text-sm text-white">Matched with Sarah</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-white/20"></div>
+                    <p class="text-sm text-white/60">Profile viewed by Alex</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-headline font-bold text-white tracking-tight">Your Next 3 Matches</h2>
+            <button onclick="showView('matches')" class="text-sm font-bold text-primary hover:underline">View All Matches</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-panel p-6 rounded-2xl flex items-center gap-4 card-interact cursor-pointer" onclick="showView('matches')">
+                <img src="https://i.pravatar.cc/100?u=sarah" class="w-12 h-12 rounded-xl">
+                <div>
+                    <p class="font-bold text-white">Sarah Jenkins</p>
+                    <p class="text-xs text-primary">92% Match</p>
+                </div>
+            </div>
+            <div class="glass-panel p-6 rounded-2xl flex items-center gap-4 card-interact cursor-pointer" onclick="showView('matches')">
+                <img src="https://i.pravatar.cc/100?u=elena" class="w-12 h-12 rounded-xl">
+                <div>
+                    <p class="font-bold text-white">Elena Vance</p>
+                    <p class="text-xs text-primary">98% Match</p>
+                </div>
+            </div>
+            <div class="glass-panel p-6 rounded-2xl flex items-center gap-4 card-interact cursor-pointer" onclick="showView('matches')">
+                <img src="https://i.pravatar.cc/100?u=marcus" class="w-12 h-12 rounded-xl">
+                <div>
+                    <p class="font-bold text-white">Marcus Thorne</p>
+                    <p class="text-xs text-primary">92% Match</p>
+                </div>
+            </div>
+        </div>
+    </section>

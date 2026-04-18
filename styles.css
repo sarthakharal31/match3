@@ -1,0 +1,149 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-panel {
+    background: rgba(11, 8, 28, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metallic-gradient {
+    background: linear-gradient(135deg, #111111 0%, #222222 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.theme-bg {
+    background: radial-gradient(circle at top left, #ffcfb3 0%, transparent 45%),
+        radial-gradient(circle at 60% 50%, #b07ff1 0%, transparent 50%),
+        radial-gradient(circle at bottom right, #0b081c 0%, transparent 70%);
+    background-color: #241b42;
+    background-attachment: fixed;
+}
+
+.architectural-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+/* Focus Mode Transitions */
+.focus-transition {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.focus-active header,
+body.focus-active aside {
+    opacity: 0.5;
+    filter: blur(4px);
+    transform: scale(0.98);
+    pointer-events: none;
+}
+
+body.focus-active main {
+    transform: scale(1.02);
+    z-index: 10;
+}
+
+/* Micro-interactions */
+.btn-interact {
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.btn-interact:hover {
+    box-shadow: 0 0 20px rgba(176, 127, 241, 0.4);
+}
+
+.btn-interact:active {
+    transform: scale(0.97);
+}
+
+.card-interact {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-interact:hover {
+    transform: translateY(-8px);
+    border-color: rgba(176, 127, 241, 0.4);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.tag-interact {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag-interact:hover {
+    background-color: #b07ff1 !important;
+    color: #ffffff !important;
+}
+
+@keyframes modalEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+.modal-animate {
+    animation: modalEntrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* View Transition: fade + slide up */
+.view-content {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.view-content.view-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.view-content.hidden {
+    display: none !important;
+    opacity: 0;
+    transform: translateY(16px);
+}
+
+/* Count-up animation helper */
+.count-up-reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: countUpAnim 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes countUpAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(176, 127, 241, 0.4);
+}

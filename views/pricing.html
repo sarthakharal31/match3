@@ -1,0 +1,131 @@
+<!-- View: Pricing -->
+<section class="space-y-4 text-center max-w-2xl mx-auto">
+    <span class="text-xs font-black uppercase tracking-widest text-primary block">Simple & Transparent</span>
+    <h2 class="text-4xl md:text-5xl font-headline font-black text-white tracking-tight">Choose Your Plan</h2>
+    <p class="text-on-surface-variant text-lg leading-relaxed">Start free and upgrade when you're ready to unlock the full power of AI-driven networking.</p>
+</section>
+
+<!-- Pricing Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto w-full">
+
+    <!-- Free Plan -->
+    <div class="glass-panel rounded-[2.5rem] p-10 flex flex-col gap-8 border border-white/5">
+        <div>
+            <p class="text-sm font-black uppercase tracking-widest text-white/40 mb-3">Free</p>
+            <div class="flex items-end gap-2 mb-4">
+                <span class="text-6xl font-headline font-black text-white">$0</span>
+                <span class="text-white/40 mb-2">/ month</span>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed">Perfect for exploring the platform and making your first meaningful connections at events.</p>
+        </div>
+
+        <ul class="space-y-4 flex-1">
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                <span class="text-white/80">Up to <strong class="text-white">5 AI matches</strong> per event</span>
+            </li>
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                <span class="text-white/80">Basic match scoring</span>
+            </li>
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                <span class="text-white/80">3 AI intro messages per day</span>
+            </li>
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                <span class="text-white/80">Public profile card</span>
+            </li>
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-white/20 text-lg shrink-0">cancel</span>
+                <span class="text-white/30">Advanced AI insights</span>
+            </li>
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-white/20 text-lg shrink-0">cancel</span>
+                <span class="text-white/30">Priority in match queue</span>
+            </li>
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-white/20 text-lg shrink-0">cancel</span>
+                <span class="text-white/30">Web3 identity verification</span>
+            </li>
+            <li class="flex items-center gap-4 text-sm">
+                <span class="material-symbols-outlined text-white/20 text-lg shrink-0">cancel</span>
+                <span class="text-white/30">Saved matches & notes</span>
+            </li>
+        </ul>
+
+        <button onclick="handleAction(event,'Free plan selected')" class="w-full py-4 bg-white/5 border border-white/10 text-white font-headline font-black rounded-2xl hover:bg-white/10 transition-all btn-interact">
+            Get Started Free
+        </button>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="relative rounded-[2.5rem] p-1 bg-gradient-to-br from-primary/60 via-secondary/40 to-primary/30 shadow-2xl shadow-primary/20">
+        <div class="bg-[#0d0b1e] rounded-[2.3rem] p-10 flex flex-col gap-8 h-full relative overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-48 h-48 bg-primary/20 blur-3xl rounded-full"></div>
+            
+            <div class="flex items-start justify-between">
+                <div>
+                    <p class="text-sm font-black uppercase tracking-widest text-primary mb-3">Pro</p>
+                    <div class="flex items-end gap-2 mb-4">
+                        <span class="text-6xl font-headline font-black text-white">$19</span>
+                        <span class="text-white/40 mb-2">/ month</span>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">For serious builders who want every advantage in finding the right people.</p>
+                </div>
+                <span class="px-3 py-1.5 bg-primary text-on-primary text-[10px] font-black uppercase rounded-lg shrink-0">Most Popular</span>
+            </div>
+
+            <ul class="space-y-4 flex-1 relative">
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80"><strong class="text-white">Unlimited</strong> AI matches per event</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80">Advanced match scoring & reasoning</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80"><strong class="text-white">Unlimited</strong> AI intro messages</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80">Verified Pro profile badge</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80">Advanced AI insights & explanations</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80">Priority in match queue</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80">Web3 identity verification</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm">
+                    <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+                    <span class="text-white/80">Saved matches, notes & history</span>
+                </li>
+            </ul>
+
+            <button onclick="handleAction(event,'Pro upgrade started')" class="w-full py-4 bg-primary text-on-primary font-headline font-black rounded-2xl shadow-lg shadow-primary/30 hover:scale-105 transition-all btn-interact relative">
+                Upgrade to Pro
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Enterprise CTA -->
+<div class="glass-panel rounded-[2rem] p-10 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto w-full">
+    <div>
+        <p class="text-xs font-black uppercase tracking-widest text-white/40 mb-2">Enterprise</p>
+        <h4 class="text-2xl font-headline font-bold text-white mb-2">Running a large event or community?</h4>
+        <p class="text-on-surface-variant">Custom AI matching for 500+ attendees, white-label options, and dedicated support.</p>
+    </div>
+    <button onclick="handleAction(event,'Enterprise enquiry sent')" class="shrink-0 px-8 py-4 bg-white/5 border border-white/10 text-white font-headline font-bold rounded-2xl hover:bg-white/10 transition-all btn-interact">
+        Contact Sales
+    </button>
+</div>

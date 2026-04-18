@@ -1,0 +1,38 @@
+<!-- Side Navigation Shell -->
+<aside
+    class="w-64 h-screen fixed left-0 top-0 glass-panel shadow-[inset_-1px_0_0_0_rgba(255,255,255,0.05)] pt-24 z-40 hidden lg:flex flex-col p-6 gap-2 font-['Inter'] text-sm tracking-wide focus-transition">
+    <div class="mb-8 px-2">
+        <h2 class="text-lg font-bold text-white">Marketeam</h2>
+        <p class="text-xs text-white/40 uppercase tracking-widest mt-1">Specialist Matchmaker</p>
+    </div>
+    <nav class="flex flex-col gap-1">
+        <a id="nav-home" class="flex items-center gap-3 px-4 py-3 bg-[#ffffff]/10 text-[#ffffff] rounded-md font-semibold duration-200"
+            href="#" onclick="showView('home')">
+            <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+            Dashboard
+        </a>
+        <a id="nav-matches" class="flex items-center gap-3 px-4 py-3 text-[#ffffff]/40 hover:bg-[#ffffff]/5 hover:text-[#ffffff] transition-all"
+            href="#" onclick="showView('matches')">
+            <span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+            Matches
+        </a>
+        <a id="nav-saved" class="flex items-center gap-3 px-4 py-3 text-[#ffffff]/40 hover:bg-[#ffffff]/5 hover:text-[#ffffff] transition-all"
+            href="#" onclick="showView('saved')">
+            <span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+            Saved
+        </a>
+        <a id="nav-settings" class="flex items-center gap-3 px-4 py-3 text-[#ffffff]/40 hover:bg-[#ffffff]/5 hover:text-[#ffffff] transition-all"
+            href="#" onclick="showView('settings')">
+            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+            Settings
+        </a>
+    </nav>
+    <div class="mt-auto p-4 rounded-xl bg-surface-container-highest flex flex-col gap-3">
+        <p class="text-xs text-on-surface-variant leading-relaxed">Upgrade to unlock deeper synergy analysis.
+        </p>
+        <button
+            class="w-full py-2 bg-primary/20 text-primary border border-primary/30 rounded font-bold text-xs uppercase tracking-tighter hover:bg-primary/30 transition-all btn-interact">
+            Pro Access
+        </button>
+    </div>
+</aside>
