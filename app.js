@@ -11,6 +11,54 @@ async function loadComponent(id, url) {
     }
 }
 
+// ─── Landing Page Logic ───────────────────────────────────────────────────────
+let landingPageShown = true;
+
+function showLandingPage() {
+    const landingPage = document.getElementById('landing-page');
+    const appContainer = document.getElementById('app-container');
+    if (landingPage && appContainer) {
+        landingPage.classList.remove('hidden');
+        appContainer.classList.add('hidden');
+        landingPageShown = true;
+        setupParallax();
+    }
+}
+
+function navigateToDashboard() {
+    const landingPage = document.getElementById('landing-page');
+    const appContainer = document.getElementById('app-container');
+    if (landingPage && appContainer) {
+        landingPage.classList.add('hidden');
+        appContainer.classList.remove('hidden');
+        landingPageShown = false;
+        showView('home');
+        window.scrollTo(0, 0);
+    }
+}
+
+function setupParallax() {
+    const container = document.getElementById('3d-container');
+    if (!container) return;
+
+    document.addEventListener('mousemove', (e) => {
+        if (!landingPageShown) return;
+        const nodes = container.querySelectorAll('.floating-node');
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+
+        nodes.forEach((node, index) => {
+            const depth = (index + 1) * 10;
+            const moveX = (mouseX - 0.5) * depth;
+            const moveY = (mouseY - 0.5) * depth;
+            node.style.setProperty('--mouse-x', `${moveX}px`);
+            node.style.setProperty('--mouse-y', `${moveY}px`);
+        });
+    });
+}
+
+// ─── End Landing Page Logic ───────────────────────────────────────────────────
+
 // ─── Matches Data Store & Filter Engine (Dropdown Panel) ─────────────────────
 const MATCH_DATA = [
     { name: 'Elena Vance',  role: 'Protocol Architect',    category: 'Developer', avatar: 'https://i.pravatar.cc/150?u=elena',  skills: ['Web3','DAO','Solidity','AI'],  goal: 'Startup',    matchScore: 98, aiReason: 'Shared interest in AI agents and decentralized governance.' },
@@ -533,7 +581,10 @@ function handleSearch(event) {
 
 // Initialize on Load
 document.addEventListener('DOMContentLoaded', async () => {
-    // Load components sequentially
+    // Load landing page
+    await loadComponent('landing-page', 'views/landing.html');
+    
+    // Load app components sequentially
     await loadComponent('sidebar-container', 'components/sidebar.html');
     await loadComponent('header-container', 'components/header.html');
     await loadComponent('modal-container', 'components/modal.html');
@@ -550,8 +601,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('view-blog', 'views/blog.html');
     await loadComponent('view-pricing', 'views/pricing.html');
 
-    // Show initial view
-    showView('home');
+    // Show landing page initially
+    showLandingPage();
+    setupParallax();
 
     // Close focus mode when clicking main or background if active
     document.addEventListener('keydown', (e) => {
