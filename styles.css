@@ -7,6 +7,26 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.glass-panel:hover {
+    transform: translateY(-6px) scale(1.012);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.18),
+        0 0 18px 2px rgba(220, 220, 255, 0.10),
+        0 24px 48px -12px rgba(0, 0, 0, 0.55);
+}
+
+/* Suppress hover pop on layout shells — only content cards should lift */
+aside .glass-panel:hover,
+header .glass-panel:hover,
+#profile-modal-overlay .glass-panel:hover,
+.no-hover-effect:hover {
+    transform: none !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    box-shadow: none !important;
 }
 
 .metallic-gradient {
@@ -61,14 +81,17 @@ body.focus-active main {
 }
 
 .card-interact {
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .card-interact:hover {
-    transform: translateY(-8px);
-    border-color: rgba(176, 127, 241, 0.4);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px) scale(1.015);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.18),
+        0 0 18px 2px rgba(220, 220, 255, 0.10),
+        0 24px 48px -12px rgba(0, 0, 0, 0.55);
 }
 
 .tag-interact {
@@ -96,6 +119,19 @@ body.focus-active main {
 
 .modal-animate {
     animation: modalEntrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Filter Panel Dropdown Animation */
+.filter-panel-animate {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: top right;
+}
+
+.filter-panel-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 /* View Transition: fade + slide up */

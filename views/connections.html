@@ -1,0 +1,44 @@
+<!-- View: My Connections -->
+
+<!-- Connections Header -->
+<section>
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-4">
+        <div>
+            <h2 class="text-3xl font-headline font-black text-white mb-1 tracking-tight">My Connections</h2>
+            <p class="text-on-surface-variant text-sm">People you've connected with</p>
+        </div>
+
+        <!-- Connection Count Badge -->
+        <div class="flex items-center gap-4">
+            <div class="px-6 py-3 bg-white/5 border border-white/10 rounded-xl">
+                <div class="text-xs font-bold uppercase tracking-widest text-white/40 mb-1">Total Connections</div>
+                <div id="connection-count" class="text-2xl font-headline font-black text-primary">0</div>
+            </div>
+
+            <!-- Search by name -->
+            <div class="relative">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/40 text-xl">search</span>
+                <input type="text" id="connection-search" placeholder="Search by name..." onkeyup="searchConnections(this.value)"
+                    class="bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all">
+            </div>
+        </div>
+    </div>
+
+    <!-- Results text -->
+    <p id="connections-result-count" class="text-sm text-white/40 font-bold mb-6"></p>
+
+    <!-- Empty State -->
+    <div id="connections-empty" class="hidden flex flex-col items-center justify-center py-16 px-4">
+        <div class="w-24 h-24 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-5xl text-white/30">people</span>
+        </div>
+        <h3 class="text-2xl font-headline font-bold text-white mb-2">No connections yet</h3>
+        <p class="text-on-surface-variant text-center max-w-md mb-6">Start connecting with people from Matches to build your network!</p>
+        <button onclick="showView('matches')" class="px-8 py-3 bg-primary text-on-primary font-headline font-bold rounded-xl hover:scale-105 transition-all btn-interact">
+            Browse Matches
+        </button>
+    </div>
+
+    <!-- Connections Grid -->
+    <div id="connections-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[200px]"></div>
+</section>

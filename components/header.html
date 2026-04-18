@@ -1,15 +1,12 @@
 <!-- Top Navigation Shell -->
 <header
     class="w-full h-20 sticky top-0 bg-transparent flex items-center justify-between px-12 z-50 shadow-none focus-transition">
-    <div onclick="showView('home')" class="text-xl font-black tracking-tighter text-primary font-['Manrope'] cursor-pointer">
-        MARKETEAM
-    </div>
+
     <div class="flex items-center gap-8 flex-1 justify-end">
         <nav class="hidden md:flex gap-2 font-['Manrope'] font-bold tracking-tight text-sm">
             <a id="nav-header-team" onclick="showView('team')" class="nav-link-header px-4 py-2 rounded-xl text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer">Your Team</a>
             <a id="nav-header-solutions" onclick="showView('solutions')" class="nav-link-header px-4 py-2 rounded-xl text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer">Solutions</a>
             <a id="nav-header-blog" onclick="showView('blog')" class="nav-link-header px-4 py-2 rounded-xl text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer">Blog</a>
-            <a id="nav-header-pricing" onclick="showView('pricing')" class="nav-link-header px-4 py-2 rounded-xl text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer">Pricing</a>
         </nav>
         <div class="flex items-center gap-6 ml-4">
             <a onclick="handleAction(event,'Login')" class="text-white hover:text-white/80 transition-colors font-bold text-sm cursor-pointer">Log In</a>
